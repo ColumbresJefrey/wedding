@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #FAF7EE;
+    color: #2A2E2B;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF7EE;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4B87E;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C29F5A;
+  }
+}
+
+/* Delicate gold foil shimmer keyframes */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #B39272 0%,
+    #EADFCF 25%,
+    #C29F5A 50%,
+    #EADFCF 75%,
+    #B39272 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: goldShimmer 8s linear infinite;
+}
+
+/* Elegant wax seal shadow */
+.shadow-wax {
+  box-shadow: 
+    0 4px 6px -1px rgba(139, 44, 44, 0.3),
+    0 2px 4px -2px rgba(139, 44, 44, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle luxury deckle edge border effect */
+.border-deckle {
+  border: 1px solid rgba(194, 159, 90, 0.25);
+  box-shadow: 0 0 0 4px #FAF7EE, 0 0 0 5px rgba(194, 159, 90, 0.15);
+}
+
